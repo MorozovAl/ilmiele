@@ -167,7 +167,7 @@ body {
 .product_size {
     position: relative;
 
-    bottom: calc(-100% + 80px);
+    bottom: calc(-100% + 55px);
     left: 20px;
 
     color: white;
@@ -175,7 +175,7 @@ body {
 
 .two_product_id,
 .two_product_id+.product_size {
-    bottom: calc(-100% + 115px);
+    bottom: calc(-100% + 80px);
 }
 
 .menu {
@@ -494,6 +494,9 @@ body {
         font-size: 34px;
     }
 
+    .container_margin {
+        padding-bottom: 790px
+    }
     .col_margin {
         font-size: 22px;
     }
@@ -527,10 +530,9 @@ body {
 
 @media screen and (max-width: 360px) {
     .NameShop {
-        margin-top: 0;
-        height: auto;
+        margin-top: -8px;
+        height: 56px;
         font-family: 'CHILLER' !important;
-        font-size: 2rem;
     }
 
     .tagline {
