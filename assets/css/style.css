@@ -257,7 +257,7 @@ body {
 
 .form-row input:focus+label,
 .form-row input:valid+label {
-    transform: translateY(-60px);
+    transform: translateY(-65px);
     margin-left: 0px;
     font-size: 18px;
     font-weight: 400;

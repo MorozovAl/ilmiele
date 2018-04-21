@@ -50,12 +50,14 @@ if (isMobile.any()) {
 /*Автоматическое заполнение некоторых атрибутов*/
 var stripCaption = document.querySelectorAll('.strip');
 var product_id = document.querySelectorAll('.product_id');
+var linkIMG = document.querySelectorAll('.container__product_img')
 var attrib = [];
 
 for (var i = 0; i < stripCaption.length; i++) {
     attrib[i] = product_id[i].innerHTML;
     stripCaption[i].setAttribute('data-strip-caption', attrib[i]);
     product_id[i].setAttribute('data-name', attrib[i]);
+    stripCaption[i].setAttribute('href',linkIMG[i].getAttribute('src'));
 }
 
 /*Определения контейнера для mixitup*/
