@@ -39,7 +39,7 @@ $(function () {
 		timer:           null,
 		busy:            false,
 		scroll_padding:   1000,
-		effects_padding:  -600,
+		effects_padding:  -100000,
 		refresh:         function () {}
 	}, typeof Revealator !== 'undefined' ? Revealator : {});
 

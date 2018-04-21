@@ -1,7 +1,28 @@
+@font-face {
+    font-family: 'CHILLER';
+    src: url('../font/CHILLER.eot');
+    src: local('CHILLER'), url('../font/CHILLER.eot?#iefix') format('embedded-opentype'), url('../font/CHILLER.woff') format('woff'), url('../font/CHILLER.ttf') format('truetype');
+}
+
+html {
+    height: 100%;
+
+}
+
 body {
+    height: 100%;
+    min-height: 925px;
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
     background-image: url(../img/bg.jpg);
+    margin: 0;
+    padding: 0;
+}
+
+.site {
+    position: relative;
+    min-height: 100%;
+
 }
 
 
@@ -9,9 +30,12 @@ body {
     position: relative;
     top: 0;
     z-index: 2;
-    background-color: whitesmoke;
+    background-color: rgba(245, 245, 245, 0.8);
 }
 
+.links__element {
+    width: 32px;
+}
 
 .links__element:hover {
     -webkit-animation: swing 0.6s ease-out;
@@ -33,12 +57,12 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
 }
 
+
+
 .NameShop {
-    font-family: chiller;
-    /* Гарнитура шрифта */
-    src: url(../font/chiller.ttf);
-    /* Путь к файлу со шрифтом */
-    font-size: 3rem;
+    height: 74px;
+    font-family: 'CHILLER' !important;
+    font-size: 4rem;
     color: black;
 }
 
@@ -68,11 +92,13 @@ body {
 }
 
 .info_icons {
+    width: 24px;
     margin: 3px;
     margin-right: 10px;
 }
 
 .container_margin {
+    padding-bottom: 500px;
     padding-top: 10px;
 }
 
@@ -80,7 +106,7 @@ body {
     position: relative;
 
     padding: 0;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
 
     overflow: hidden;
     cursor: pointer;
@@ -89,8 +115,8 @@ body {
 }
 
 .row__col {
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 
 .container__product:hover .container__product_img {
@@ -145,6 +171,11 @@ body {
     left: 20px;
 
     color: white;
+}
+
+.two_product_id,
+.two_product_id+.product_size {
+    bottom: calc(-100% + 115px);
 }
 
 .menu {
@@ -252,7 +283,8 @@ body {
 
 .form-row input:focus {
     outline: 0;
-    border-color: black/*#ffdb4d*/;
+    border-color: black/*#ffdb4d*/
+    ;
 }
 
 .form-row input:focus+label,
@@ -262,16 +294,24 @@ body {
     font-size: 18px;
     font-weight: 400;
     outline: 0;
-    border-color: #ffdb4d/*#F77A52*/;
-    color: black/*#ffdb4d*/;
+    border-color: #ffdb4d/*#F77A52*/
+    ;
+    color: black/*#ffdb4d*/
+    ;
 }
 
 
 .map {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
     margin-top: 40px;
+    margin-bottom: 60px;
 }
 
 .footer {
+    position: absolute;
+    bottom: 0;
     width: 100%;
     height: 60px;
     line-height: 60px;
@@ -297,7 +337,7 @@ body {
 }
 
 .col_margin {
-    margin-top: 34px;
+    margin-top: 20px;
 }
 
 .contact_name {
@@ -426,6 +466,11 @@ body {
 
 
 @media screen and (max-width: 986px) {
+    .NameShop {
+        margin-top: -12px;
+        height: 70px;
+    }
+
     .vertical_line,
     .col_info {
         display: none;
@@ -452,6 +497,13 @@ body {
     .col_margin {
         font-size: 22px;
     }
+
+    .NameShop {
+        height: 58px;
+        font-family: 'CHILLER' !important;
+        font-size: 3rem;
+        color: black;
+    }
 }
 
 @media screen and (max-width: 470px) {
@@ -473,22 +525,11 @@ body {
     }
 }
 
-@media screen and (max-width: 340px) {
-    .col_margin {
-        font-size: 13px;
-    }
-
-    .footer {
-        font-size: 9px;
-    }
-}
-
 @media screen and (max-width: 360px) {
     .NameShop {
-        font-family: chiller;
-        /* Гарнитура шрифта */
-        src: url(../font/chiller.ttf);
-        /* Путь к файлу со шрифтом */
+        margin-top: 0;
+        height: auto;
+        font-family: 'CHILLER' !important;
         font-size: 2rem;
     }
 
@@ -500,6 +541,18 @@ body {
         padding-top: 10px;
     }
 }
+
+@media screen and (max-width: 340px) {
+    .col_margin {
+        font-size: 13px;
+    }
+
+    .footer {
+        font-size: 9px;
+    }
+}
+
+
 
 @-webkit-keyframes swing {
     15% {

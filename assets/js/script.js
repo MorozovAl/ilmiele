@@ -43,8 +43,10 @@ var isMobile = {
         return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
     }
 };
+var vibermobileLink = 'viber://add?number=375296303097';
 if (isMobile.any()) {
     $('.container__product_hover').removeClass('container__product_hover').addClass('container__product_hover_touch');
+    $('.viberMobile')[0].setAttribute('href',vibermobileLink);
 }
 
 /*Автоматическое заполнение некоторых атрибутов*/
